@@ -1,0 +1,114 @@
+# ==========================================
+# 1. AI Models, Datasets & Archives (대용량 바이너리 차단)
+# ==========================================
+*.engine
+*.onnx
+*.pt
+*.pth
+*.tflite
+*.weights
+*.mp4
+*.avi
+*.mkv
+runs/
+dataset/
+dataset_*/
+datasets/
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# ==========================================
+# 2. Python & Jetson OS
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.log
+.ipynb_checkpoints/
+.pytest_cache/
+.coverage
+
+# ==========================================
+# 3. Qt & Desktop UI (C++)
+# ==========================================
+build/
+build-*/
+dist/
+*.user
+*.user.*
+.qmake.stash
+Makefile.Debug
+Makefile.Release
+object_script.*
+
+# ==========================================
+# 4. STM32 / MCU Firmware & Toolchain
+# ==========================================
+Debug/
+Release/
+*.o
+*.d
+*.elf
+*.bin
+*.hex
+*.map
+*.axf
+*.dmp
+*dump*.txt
+.mxproject
+.metadata/
+
+# ==========================================
+# 5. Android Studio
+# ==========================================
+.gradle/
+local.properties
+.idea/
+*.apk
+*.aab
+.cxx/
+captures/
+*.iml
+
+# ==========================================
+# 6. Database & Environment Secrets
+# ==========================================
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# 7. IDE & Operating System Artifacts
+# ==========================================
+.vscode/
+.DS_Store
+*.swp
+*.swo
+*~
+Thumbs.db
+desktop.ini
+ehthumbs.db
+# Local credentials and signing material (templates remain tracked).
+.env
+.env.*
+!.env.example
+!.env.*.example
+secrets.properties
+local.properties
+google-services.json
+GoogleService-Info.plist
+*.keystore
+*.jks
+*.p12
+*.pfx
+*.pem
+*.key
