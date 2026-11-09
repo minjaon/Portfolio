@@ -9,7 +9,7 @@
 
 <br/>
 
-## About
+## 👋 About
 
 **레지스터 설정 한 줄이 실제 기구의 움직임으로 이어지는 펌웨어를 만듭니다.**
 데이터시트에서 원인을 좁히고, 서보 돌입전류나 센서 튐 값 같은 하드웨어의 물리적 한계를 펌웨어 설계로 다룹니다.
@@ -35,7 +35,7 @@
 
 <br/>
 
-## Tech Stack
+## 🛠 Tech Stack
 
 **Embedded & Systems**<br/>
 <img src="https://img.shields.io/badge/c-A8B9CC?style=for-the-badge&logo=c&logoColor=black"> <img src="https://img.shields.io/badge/c++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"> <img src="https://img.shields.io/badge/stm32-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white"> <img src="https://img.shields.io/badge/arm%20cortex--m4-0091BD?style=for-the-badge&logo=arm&logoColor=white"> <img src="https://img.shields.io/badge/avr%20atmega128-555555?style=for-the-badge&logo=microchip&logoColor=white"> <img src="https://img.shields.io/badge/linux%20kernel-FCC624?style=for-the-badge&logo=linux&logoColor=black"> <img src="https://img.shields.io/badge/jetson-76B900?style=for-the-badge&logo=nvidia&logoColor=white"> <img src="https://img.shields.io/badge/verilog-555555?style=for-the-badge"> <img src="https://img.shields.io/badge/Qt-41CD52?style=for-the-badge&logo=qt&logoColor=white">
@@ -48,7 +48,7 @@
 
 <br/>
 
-## Projects
+## 📂 Projects
 
 | Project | Platform | Role | Keywords |
 |---|---|---|---|
@@ -62,13 +62,13 @@
 
 <br/>
 
----
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f2027,100:2c5364&height=3" width="100%"/></div>
 
 <a id="p01"></a>
 
 <div align="center">
 
-<h1>Smart Recycling Kiosk</h1>
+<h1>♻️ Smart Recycling Kiosk</h1>
 
 <b>AI 분리수거 키오스크 — 분류 기구 MCU 펌웨어</b>
 
@@ -86,7 +86,7 @@
 |:-:|:-:|:-:|:-:|
 | 2026.09 | 4인 | **MCU 제어 · 적재율 필터링** (`mcu_firmware/` 전체) | STM32F411 · arm-none-eabi-gcc · Makefile |
 
-### Overview
+### ▸ Overview
 Jetson이 카메라 영상으로 재질(종이 · 캔 · PET · 비닐)과 라벨 · 오염 여부를 판별해 UART로 명령을 보내면, STM32가 **서보 3축으로 분류 통로를 맞춘 뒤 투입구를 열고**, 초음파 4채널로 **수거함별 적재율을 계측해 보고**합니다. 저는 이 중 STM32 펌웨어 전체를 HAL 없이 레지스터 수준으로 작성했습니다.
 
 <br/>
@@ -98,7 +98,7 @@ Jetson이 카메라 영상으로 재질(종이 · 캔 · PET · 비닐)과 라�
 
 <br/>
 
-### Key Implementation
+### ▸ Key Implementation
 
 | 영역 | 구현 내용 |
 |---|---|
@@ -108,7 +108,7 @@ Jetson이 카메라 영상으로 재질(종이 · 캔 · PET · 비닐)과 라�
 | **초음파 계측** | TIM4 1µs 카운터로 에코 폭 측정, 4채널 순차 측정 · 에코 대기 타임아웃 |
 | **적재율 필터** | 2초 블랭킹 → 5샘플 중앙값 ±5cm 이탈값 제외 평균 → 5%p 이상 변화 시에만 갱신 |
 
-### Troubleshooting
+### ▸ Troubleshooting
 
 | Problem | Cause | Solution |
 |---|---|---|
@@ -117,7 +117,7 @@ Jetson이 카메라 영상으로 재질(종이 · 캔 · PET · 비닐)과 라�
 | 부팅 직후 보드 불안정 | 서보 3개 동시 구동 → 돌입전류로 5V 강하 | 시간차를 두고 **한 축씩 순차 정렬** |
 | 적재율 수치가 계속 흔들림 | 낙하 중인 물체 · 순간 튐 값 | **3단계 필터**와 변화 임계값 갱신 |
 
-### Gallery
+### ▸ Gallery
 
 <br/>
 
@@ -175,13 +175,13 @@ Jetson이 카메라 영상으로 재질(종이 · 캔 · PET · 비닐)과 라�
 
 <br/>
 
----
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f2027,100:2c5364&height=3" width="100%"/></div>
 
 <a id="p02"></a>
 
 <div align="center">
 
-<h1>Linux Device Driver</h1>
+<h1>🐧 Linux Device Driver</h1>
 
 <b>Jetson Orin Nano 커널 캐릭터 디바이스 드라이버</b>
 
@@ -202,7 +202,7 @@ Jetson이 카메라 영상으로 재질(종이 · 캔 · PET · 비닐)과 라�
 |:-:|:-:|:-:|:-:|
 | 2026.10 | 4인 | **8-Bar LED 드라이버** (`led_bar_driver.ko`) | Jetson Orin Nano · Linux 5.15-tegra |
 
-### Overview
+### ▸ Overview
 EC11 엔코더를 돌리면 DC 모터 속도가 바뀌고 8-Bar LED에 단계가 표시되는 시스템입니다. 같은 기능을 **유저 공간(libgpiod · sysfs)과 커널 캐릭터 디바이스 드라이버 두 방식으로 구현해 비교**했고, 드라이버 3개(엔코더 · 모터 · LED)를 팀원이 하나씩 맡았습니다.
 
 <br/>
@@ -214,7 +214,7 @@ EC11 엔코더를 돌리면 DC 모터 속도가 바뀌고 8-Bar LED에 단계가
 
 <br/>
 
-### Key Implementation — `/dev/led_bar`
+### ▸ Key Implementation — `/dev/led_bar`
 
 | 영역 | 구현 내용 |
 |---|---|
@@ -226,7 +226,7 @@ EC11 엔코더를 돌리면 DC 모터 속도가 바뀌고 8-Bar LED에 단계가
 
 팀 공통으로 Jetson-IO 핀 Mux 재설정(SPI · I2S 핀 → GPIO / PWM)과 공용 ioctl 헤더(`common_ioctl.h`) 정의를 함께 진행했습니다.
 
-### Gallery
+### ▸ Gallery
 
 <br/>
 
@@ -273,13 +273,13 @@ EC11 엔코더를 돌리면 DC 모터 속도가 바뀌고 8-Bar LED에 단계가
 
 <br/>
 
----
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f2027,100:2c5364&height=3" width="100%"/></div>
 
 <a id="p03"></a>
 
 <div align="center">
 
-<h1>Smart Gate</h1>
+<h1>🚦 Smart Gate</h1>
 
 <b>로컬 LLM 연동 스마트 차단봉 · 신호등</b>
 
@@ -293,7 +293,7 @@ EC11 엔코더를 돌리면 DC 모터 속도가 바뀌고 8-Bar LED에 단계가
 |:-:|:-:|:-:|:-:|
 | 2026.08 | 4인 | **펌웨어(`main.cpp`) · GUI(`main.py`) 개편** | NUCLEO-F411RE · STM32 HAL · PlatformIO · PyQt5 |
 
-### Overview
+### ▸ Overview
 초음파 센서로 장애물을 감지해 서보 차단봉과 신호등을 제어하고, PC GUI와 로컬 LLM(Ollama `qwen2.5:3b`)으로 자연어 제어를 붙인 시스템입니다. 설계 원칙은 **위험한 판단은 펌웨어에 둔다**는 것으로, LLM은 자연어를 허용된 UART 명령으로 바꾸기만 하고 실행 여부는 STM32 FSM이 결정합니다.
 
 <br/>
@@ -309,7 +309,7 @@ flowchart LR
 
 <br/>
 
-### Key Implementation
+### ▸ Key Implementation
 
 | 영역 | 구현 내용 |
 |---|---|
@@ -318,7 +318,7 @@ flowchart LR
 | **명령 체계** | 조회 · 제어 · 설정 · 복구 UART 명령, `THRESHOLD:n`으로 재컴파일 없이 감지 거리 변경 |
 | **GUI** | 시리얼 수신 · LLM 호출을 QThread로 분리해 화면 멈춤 방지, 최근 사고 3건 기록 |
 
-### Troubleshooting
+### ▸ Troubleshooting
 
 | Problem | Cause | Solution |
 |---|---|---|
@@ -350,13 +350,13 @@ stateDiagram-v2
 
 <br/>
 
----
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f2027,100:2c5364&height=3" width="100%"/></div>
 
 <a id="p04"></a>
 
 <div align="center">
 
-<h1>FPGA Microwave</h1>
+<h1>🔲 FPGA Microwave</h1>
 
 <b>Basys3 Verilog 전자레인지 컨트롤러</b>
 
@@ -373,7 +373,7 @@ stateDiagram-v2
 |:-:|:-:|
 | 개인 | Basys3 (XC7A35T, 100MHz) · Verilog · Vivado |
 
-### Overview
+### ▸ Overview
 로터리 엔코더로 조리 시간을 맞추고 서보(문) · DC 모터(턴테이블) · 부저 · FND를 제어하는 전자레인지입니다. 조리 중 문이 열리면 즉시 일시정지하고, 문이 열린 상태에서는 재시작을 거부하도록 메인 FSM을 설계했습니다.
 
 <br/>
@@ -391,7 +391,7 @@ stateDiagram-v2
 
 <br/>
 
-### Troubleshooting
+### ▸ Troubleshooting
 
 | Problem | Solution |
 |---|---|
@@ -410,13 +410,13 @@ stateDiagram-v2
 
 <br/>
 
----
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f2027,100:2c5364&height=3" width="100%"/></div>
 
 <a id="p05"></a>
 
 <div align="center">
 
-<h1>Autonomous RC Car</h1>
+<h1>🚗 Autonomous RC Car</h1>
 
 <b>ATmega128A 3채널 초음파 자율주행</b>
 
@@ -430,7 +430,7 @@ stateDiagram-v2
 |:-:|:-:|
 | 개인 | ATmega128A @16MHz · Bare-metal C · Microchip Studio |
 
-### Overview
+### ▸ Overview
 블루투스 수동 조종과 초음파 자율주행을 버튼 하나로 전환하는 RC카입니다.
 
 <br/>
@@ -446,7 +446,7 @@ flowchart LR
 
 <br/>
 
-### Key Implementation
+### ▸ Key Implementation
 
 | 영역 | 구현 내용 |
 |---|---|
@@ -463,13 +463,13 @@ flowchart LR
 
 <br/>
 
----
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f2027,100:2c5364&height=3" width="100%"/></div>
 
 <a id="p06"></a>
 
 <div align="center">
 
-<h1>YOLO RPS Game</h1>
+<h1>✊ YOLO RPS Game</h1>
 
 <b>YOLO 가위바위보 2인 판정 게임</b>
 
@@ -483,7 +483,7 @@ flowchart LR
 |:-:|:-:|
 | 개인 | Ultralytics YOLO11n · ONNX · TensorRT |
 
-### Overview
+### ▸ Overview
 웹캠에 비친 두 손을 인식해 가위바위보 승부를 판정합니다. 공개 데이터셋과 직접 수집한 데이터를 합쳐 학습하고, PC용 ONNX 추론과 TensorRT 추론을 분리해 구성했습니다.
 
 <br/>
@@ -501,7 +501,7 @@ flowchart LR
 
 <br/>
 
-### Key Implementation
+### ▸ Key Implementation
 
 | 영역 | 구현 내용 |
 |---|---|
@@ -517,13 +517,13 @@ flowchart LR
 
 <br/>
 
----
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f2027,100:2c5364&height=3" width="100%"/></div>
 
 <a id="p07"></a>
 
 <div align="center">
 
-<h1>AgeApt</h1>
+<h1>🎬 AgeApt</h1>
 
 <b>AI 연령 분석 맞춤형 영화관 키오스크 · 캡스톤디자인 경진대회 우수상</b>
 
@@ -542,10 +542,10 @@ flowchart LR
 |:-:|:-:|:-:|:-:|
 | 2024.09 ~ 2025.03 | 4인 | **Back-end · DevOps** | Spring Boot · JPA · MySQL · Docker · AWS EC2 |
 
-### Overview
+### ▸ Overview
 카메라로 사용자의 연령대를 추정해 UI를 바꿔 주는 영화관 키오스크입니다. 백엔드를 주로 작성하고, 개발 환경 구성부터 EC2 배포까지 맡았습니다.
 
-### Key Implementation
+### ▸ Key Implementation
 
 | 영역 | 구현 내용 |
 |---|---|
@@ -553,7 +553,7 @@ flowchart LR
 | **외부 연동** | TMDB API로 인기 영화 · 장르 저장 및 상영 시간 생성, 카카오페이 결제 준비, 예매 완료 SMS |
 | **배포** | BE 환경 구성 → MySQL 연동 → Docker 이미지화 → EC2 배포 |
 
-### Gallery
+### ▸ Gallery
 
 <br/>
 
