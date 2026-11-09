@@ -14,12 +14,24 @@
 **레지스터 설정 한 줄이 실제 기구의 움직임으로 이어지는 펌웨어를 만듭니다.**
 데이터시트에서 원인을 좁히고, 서보 돌입전류나 센서 튐 값 같은 하드웨어의 물리적 한계를 펌웨어 설계로 다룹니다.
 
-| |
-|---|---|
-| **Education** | 한국공학대학교 컴퓨터공학전공 · 2027.02 졸업예정 |
-| **Training** | 시스템 반도체 SW 설계 과정 · 대한상공회의소 서울기술교육센터 (2026.05 ~ 2026.12) |
-| **Awards** | 캡스톤디자인 경진대회 우수상 (2025.12) · IR 챌린지 모의 발표회 우수상 (2024.09) |
-| **Focus** | MCU 펌웨어 · 임베디드 리눅스 디바이스 드라이버 · FPGA |
+<table>
+  <tr>
+    <td><b>Education</b></td>
+    <td>한국공학대학교 컴퓨터공학전공 · 2027.02 졸업예정</td>
+  </tr>
+  <tr>
+    <td><b>Training</b></td>
+    <td>시스템 반도체 SW 설계 과정 · 대한상공회의소 서울기술교육센터 (2026.05 ~ 2026.12)</td>
+  </tr>
+  <tr>
+    <td><b>Awards</b></td>
+    <td>캡스톤디자인 경진대회 우수상 (2025.12) · IR 챌린지 모의 발표회 우수상 (2024.09)</td>
+  </tr>
+  <tr>
+    <td><b>Focus</b></td>
+    <td>MCU 펌웨어 · 임베디드 리눅스 디바이스 드라이버 · FPGA</td>
+  </tr>
+</table>
 
 <br/>
 
@@ -54,8 +66,13 @@
 
 <a id="p01"></a>
 
-## Smart Recycling Kiosk
-**AI 분리수거 키오스크 — 분류 기구 MCU 펌웨어**
+<div align="center">
+
+<h1>Smart Recycling Kiosk</h1>
+
+<b>AI 분리수거 키오스크 — 분류 기구 MCU 펌웨어</b>
+
+</div>
 
 <br/>
 
@@ -162,8 +179,13 @@ Jetson이 카메라 영상으로 재질(종이 · 캔 · PET · 비닐)과 라�
 
 <a id="p02"></a>
 
-## Linux Device Driver
-**Jetson Orin Nano 커널 캐릭터 디바이스 드라이버**
+<div align="center">
+
+<h1>Linux Device Driver</h1>
+
+<b>Jetson Orin Nano 커널 캐릭터 디바이스 드라이버</b>
+
+</div>
 
 <br/>
 
@@ -255,8 +277,13 @@ EC11 엔코더를 돌리면 DC 모터 속도가 바뀌고 8-Bar LED에 단계가
 
 <a id="p03"></a>
 
-## Smart Gate
-**로컬 LLM 연동 스마트 차단봉 · 신호등**
+<div align="center">
+
+<h1>Smart Gate</h1>
+
+<b>로컬 LLM 연동 스마트 차단봉 · 신호등</b>
+
+</div>
 
 <!-- 시연 GIF를 assets/03/demo.gif 로 넣고 주석을 해제하세요
 <p align="center"><img src="./assets/03/demo.gif" width="80%"/></p>
@@ -327,8 +354,13 @@ stateDiagram-v2
 
 <a id="p04"></a>
 
-## FPGA Microwave
-**Basys3 Verilog 전자레인지 컨트롤러**
+<div align="center">
+
+<h1>FPGA Microwave</h1>
+
+<b>Basys3 Verilog 전자레인지 컨트롤러</b>
+
+</div>
 
 <!-- 보드 사진 · 시뮬레이션 캡처를 assets/04/ 에 넣고 주석을 해제하세요
 <table><tr>
@@ -382,8 +414,13 @@ stateDiagram-v2
 
 <a id="p05"></a>
 
-## Autonomous RC Car
-**ATmega128A 3채널 초음파 자율주행**
+<div align="center">
+
+<h1>Autonomous RC Car</h1>
+
+<b>ATmega128A 3채널 초음파 자율주행</b>
+
+</div>
 
 <!-- 주행 GIF를 assets/05/driving.gif 로 넣고 주석을 해제하세요
 <p align="center"><img src="./assets/05/driving.gif" width="70%"/></p>
@@ -430,8 +467,13 @@ flowchart LR
 
 <a id="p06"></a>
 
-## YOLO RPS Game
-**YOLO 가위바위보 2인 판정 게임**
+<div align="center">
+
+<h1>YOLO RPS Game</h1>
+
+<b>YOLO 가위바위보 2인 판정 게임</b>
+
+</div>
 
 <!-- 실행 캡처를 assets/06/game.png 로 넣고 주석을 해제하세요
 <p align="center"><img src="./assets/06/game.png" width="70%"/></p>
@@ -479,8 +521,13 @@ flowchart LR
 
 <a id="p07"></a>
 
-## AgeApt
-**AI 연령 분석 맞춤형 영화관 키오스크 · 캡스톤디자인 경진대회 우수상**
+<div align="center">
+
+<h1>AgeApt</h1>
+
+<b>AI 연령 분석 맞춤형 영화관 키오스크 · 캡스톤디자인 경진대회 우수상</b>
+
+</div>
 
 <br/>
 
