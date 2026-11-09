@@ -14,7 +14,7 @@
 **레지스터 설정 한 줄이 실제 기구의 움직임으로 이어지는 펌웨어를 만듭니다.**
 데이터시트에서 원인을 좁히고, 서보 돌입전류나 센서 튐 값 같은 하드웨어의 물리적 한계를 펌웨어 설계로 다룹니다.
 
-| | |
+| |
 |---|---|
 | **Education** | 한국공학대학교 컴퓨터공학전공 · 2027.02 졸업예정 |
 | **Training** | 시스템 반도체 SW 설계 과정 · 대한상공회의소 서울기술교육센터 (2026.05 ~ 2026.12) |
@@ -38,15 +38,15 @@
 
 ## Projects
 
-| | Project | Platform | Role | Keywords |
-|:-:|---|---|---|---|
-[**Smart Recycling Kiosk**](#p01)<br/><sub>AI 분리수거 키오스크 분류 기구 펌웨어</sub> | STM32F411 | MCU 펌웨어 전담 · 4인 | Bare-metal C, TIM PWM, USART IRQ |
-[**Linux Device Driver**](#p02)<br/><sub>Jetson 커널 캐릭터 디바이스 드라이버</sub> | Jetson Orin Nano | LED Bar 드라이버 · 4인 | Kernel Module, GPIO, ioctl |
-[**Smart Gate**](#p03)<br/><sub>로컬 LLM 연동 차단봉 · 신호등</sub> | NUCLEO-F411RE | 펌웨어 · GUI 개편 · 4인 | STM32 HAL, FSM, PyQt5 |
-[**FPGA Microwave**](#p04)<br/><sub>Verilog 전자레인지 컨트롤러</sub> | Basys3 (Artix-7) | 개인 | Verilog, FSM, Testbench |
-[**Autonomous RC Car**](#p05)<br/><sub>3채널 초음파 자율주행</sub> | ATmega128A | 개인 | AVR, Timer PWM, INT |
-[**YOLO RPS Game**](#p06)<br/><sub>가위바위보 2인 판정</sub> | PC · TensorRT | 개인 | YOLO11n, ONNX, TensorRT |
-[**AgeApt**](#p07)<br/><sub>연령 반응형 영화관 키오스크 · 캡스톤 우수상</sub> | AWS EC2 | 백엔드 · 배포 · 4인 | Spring Boot, MySQL, Docker |
+| Project | Platform | Role | Keywords |
+|---|---|---|---|
+| [**Smart Recycling Kiosk**](#p01)<br/><sub>AI 분리수거 키오스크 분류 기구 펌웨어</sub> | STM32F411 | MCU 펌웨어 전담 · 4인 | Bare-metal C, TIM PWM, USART IRQ |
+| [**Linux Device Driver**](#p02)<br/><sub>Jetson 커널 캐릭터 디바이스 드라이버</sub> | Jetson Orin Nano | LED Bar 드라이버 · 4인 | Kernel Module, GPIO, ioctl |
+| [**Smart Gate**](#p03)<br/><sub>로컬 LLM 연동 차단봉 · 신호등</sub> | NUCLEO-F411RE | 펌웨어 · GUI 개편 · 4인 | STM32 HAL, FSM, PyQt5 |
+| [**FPGA Microwave**](#p04)<br/><sub>Verilog 전자레인지 컨트롤러</sub> | Basys3 (Artix-7) | 개인 | Verilog, FSM, Testbench |
+| [**Autonomous RC Car**](#p05)<br/><sub>3채널 초음파 자율주행</sub> | ATmega128A | 개인 | AVR, Timer PWM, INT |
+| [**YOLO RPS Game**](#p06)<br/><sub>가위바위보 2인 판정</sub> | PC · TensorRT | 개인 | YOLO11n, ONNX, TensorRT |
+| [**AgeApt**](#p07)<br/><sub>연령 반응형 영화관 키오스크 · 캡스톤 우수상</sub> | AWS EC2 | 백엔드 · 배포 · 4인 | Spring Boot, MySQL, Docker |
 
 <br/>
 
@@ -331,9 +331,6 @@ stateDiagram-v2
 **Basys3 Verilog 전자레인지 컨트롤러**
 
 <!-- 보드 사진 · 시뮬레이션 캡처를 assets/04/ 에 넣고 주석을 해제하세요
-
-<br/>
-
 <table><tr>
   <td width="50%" align="center"><img src="./assets/04/board.jpg"/><br/><br/><sub>Basys3 동작</sub></td>
   <td width="50%" align="center"><img src="./assets/04/sim_pass.png"/><br/><br/><sub>테스트벤치 PASS 로그</sub></td>
@@ -347,6 +344,8 @@ stateDiagram-v2
 ### Overview
 로터리 엔코더로 조리 시간을 맞추고 서보(문) · DC 모터(턴테이블) · 부저 · FND를 제어하는 전자레인지입니다. 조리 중 문이 열리면 즉시 일시정지하고, 문이 열린 상태에서는 재시작을 거부하도록 메인 FSM을 설계했습니다.
 
+<br/>
+
 ```mermaid
 stateDiagram-v2
     direction LR
@@ -358,6 +357,8 @@ stateDiagram-v2
     DONE --> IDLE : 3초 후
 ```
 
+<br/>
+
 ### Troubleshooting
 
 | Problem | Solution |
@@ -368,6 +369,8 @@ stateDiagram-v2
 | tick을 클럭으로 쓰는 FND 스캔 | `clk` + **tick enable** 구조로 클럭 도메인 통일 |
 
 버튼 · 로터리 입력에 채터링을 넣은 테스트벤치로 시나리오별 `[PASS]` / `[FAIL]`을 자동 판정했습니다.
+
+<br/>
 
 <p align="center">
   <a href="./projects/05_fpga-microwave"><b>Source Code</b></a>
@@ -393,6 +396,8 @@ stateDiagram-v2
 ### Overview
 블루투스 수동 조종과 초음파 자율주행을 버튼 하나로 전환하는 RC카입니다.
 
+<br/>
+
 ```mermaid
 flowchart LR
     BT[블루투스] -->|UART1| MCU[ATmega128A]
@@ -402,6 +407,8 @@ flowchart LR
     MCU -->|Timer2 1ms| FND[FND 표시]
 ```
 
+<br/>
+
 ### Key Implementation
 
 | 영역 | 구현 내용 |
@@ -410,6 +417,8 @@ flowchart LR
 | **회피 로직** | 양옆이 막히면 후진, 2초 이상 갇히면 1초 탈출 후진 후 재판단 |
 | **모터 제어** | Timer1 Fast PWM(Mode 14, TOP=1023)으로 좌우 바퀴 속도 개별 제어 |
 | **구조** | UART 2채널 명령 입력, 모드별 동작을 함수 포인터 배열로 분기 |
+
+<br/>
 
 <p align="center">
   <a href="./projects/06_atmega128-auto-car"><b>Source Code</b></a>
@@ -435,6 +444,8 @@ flowchart LR
 ### Overview
 웹캠에 비친 두 손을 인식해 가위바위보 승부를 판정합니다. 공개 데이터셋과 직접 수집한 데이터를 합쳐 학습하고, PC용 ONNX 추론과 TensorRT 추론을 분리해 구성했습니다.
 
+<br/>
+
 ```mermaid
 flowchart LR
     D1[Roboflow 데이터] --> MG[클래스 번호 재매핑]
@@ -446,6 +457,8 @@ flowchart LR
     EN --> G
 ```
 
+<br/>
+
 ### Key Implementation
 
 | 영역 | 구현 내용 |
@@ -453,6 +466,8 @@ flowchart LR
 | **데이터** | 두 데이터셋 병합 시 클래스 번호를 `data.yaml` 기준으로 재매핑 |
 | **판정** | 신뢰도 상위 2개 검출만 플레이어로 선택, x좌표로 좌 · 우 구분 |
 | **추론** | ONNX(PC) 버전과 TensorRT 추론 모듈(`trt_module.py`) 분리 |
+
+<br/>
 
 <p align="center">
   <a href="./projects/07_yolo-rps-game"><b>Source Code</b></a>
@@ -467,10 +482,14 @@ flowchart LR
 ## AgeApt
 **AI 연령 분석 맞춤형 영화관 키오스크 · 캡스톤디자인 경진대회 우수상**
 
+<br/>
+
 <p align="center">
   <img src="./assets/ageapt/system_architecture.jpg" width="90%"/>
   <br/><sub>React 키오스크 · Spring Boot 백엔드 · Flask 연령 추정 서버 · MySQL</sub>
 </p>
+
+<br/>
 
 | Period | Team | Role | Environment |
 |:-:|:-:|:-:|:-:|
@@ -488,6 +507,8 @@ flowchart LR
 | **배포** | BE 환경 구성 → MySQL 연동 → Docker 이미지화 → EC2 배포 |
 
 ### Gallery
+
+<br/>
 
 <table>
   <tr>
