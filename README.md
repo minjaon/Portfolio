@@ -40,13 +40,13 @@
 
 | | Project | Platform | Role | Keywords |
 |:-:|---|---|---|---|
-| 01 | [**Smart Recycling Kiosk**](#p01)<br/><sub>AI 분리수거 키오스크 분류 기구 펌웨어</sub> | STM32F411 | MCU 펌웨어 전담 · 4인 | Bare-metal C, TIM PWM, USART IRQ |
-| 02 | [**Linux Device Driver**](#p02)<br/><sub>Jetson 커널 캐릭터 디바이스 드라이버</sub> | Jetson Orin Nano | LED Bar 드라이버 · 4인 | Kernel Module, GPIO, ioctl |
-| 03 | [**Smart Gate**](#p03)<br/><sub>로컬 LLM 연동 차단봉 · 신호등</sub> | NUCLEO-F411RE | 펌웨어 · GUI 개편 · 4인 | STM32 HAL, FSM, PyQt5 |
-| 04 | [**FPGA Microwave**](#p04)<br/><sub>Verilog 전자레인지 컨트롤러</sub> | Basys3 (Artix-7) | 개인 | Verilog, FSM, Testbench |
-| 05 | [**Autonomous RC Car**](#p05)<br/><sub>3채널 초음파 자율주행</sub> | ATmega128A | 개인 | AVR, Timer PWM, INT |
-| 06 | [**YOLO RPS Game**](#p06)<br/><sub>가위바위보 2인 판정</sub> | PC · TensorRT | 개인 | YOLO11n, ONNX, TensorRT |
-| 07 | [**AgeApt**](#p07)<br/><sub>연령 반응형 영화관 키오스크 · 캡스톤 우수상</sub> | AWS EC2 | 백엔드 · 배포 · 4인 | Spring Boot, MySQL, Docker |
+[**Smart Recycling Kiosk**](#p01)<br/><sub>AI 분리수거 키오스크 분류 기구 펌웨어</sub> | STM32F411 | MCU 펌웨어 전담 · 4인 | Bare-metal C, TIM PWM, USART IRQ |
+[**Linux Device Driver**](#p02)<br/><sub>Jetson 커널 캐릭터 디바이스 드라이버</sub> | Jetson Orin Nano | LED Bar 드라이버 · 4인 | Kernel Module, GPIO, ioctl |
+[**Smart Gate**](#p03)<br/><sub>로컬 LLM 연동 차단봉 · 신호등</sub> | NUCLEO-F411RE | 펌웨어 · GUI 개편 · 4인 | STM32 HAL, FSM, PyQt5 |
+[**FPGA Microwave**](#p04)<br/><sub>Verilog 전자레인지 컨트롤러</sub> | Basys3 (Artix-7) | 개인 | Verilog, FSM, Testbench |
+[**Autonomous RC Car**](#p05)<br/><sub>3채널 초음파 자율주행</sub> | ATmega128A | 개인 | AVR, Timer PWM, INT |
+[**YOLO RPS Game**](#p06)<br/><sub>가위바위보 2인 판정</sub> | PC · TensorRT | 개인 | YOLO11n, ONNX, TensorRT |
+[**AgeApt**](#p07)<br/><sub>연령 반응형 영화관 키오스크 · 캡스톤 우수상</sub> | AWS EC2 | 백엔드 · 배포 · 4인 | Spring Boot, MySQL, Docker |
 
 <br/>
 
@@ -54,7 +54,7 @@
 
 <a id="p01"></a>
 
-## 01. Smart Recycling Kiosk
+## Smart Recycling Kiosk
 **AI 분리수거 키오스크 — 분류 기구 MCU 펌웨어**
 
 <br/>
@@ -162,7 +162,7 @@ Jetson이 카메라 영상으로 재질(종이 · 캔 · PET · 비닐)과 라�
 
 <a id="p02"></a>
 
-## 02. Linux Device Driver
+## Linux Device Driver
 **Jetson Orin Nano 커널 캐릭터 디바이스 드라이버**
 
 <br/>
@@ -255,7 +255,7 @@ EC11 엔코더를 돌리면 DC 모터 속도가 바뀌고 8-Bar LED에 단계가
 
 <a id="p03"></a>
 
-## 03. Smart Gate
+## Smart Gate
 **로컬 LLM 연동 스마트 차단봉 · 신호등**
 
 <!-- 시연 GIF를 assets/03/demo.gif 로 넣고 주석을 해제하세요
@@ -327,7 +327,7 @@ stateDiagram-v2
 
 <a id="p04"></a>
 
-## 04. FPGA Microwave
+## FPGA Microwave
 **Basys3 Verilog 전자레인지 컨트롤러**
 
 <!-- 보드 사진 · 시뮬레이션 캡처를 assets/04/ 에 넣고 주석을 해제하세요
@@ -379,7 +379,7 @@ stateDiagram-v2
 
 <a id="p05"></a>
 
-## 05. Autonomous RC Car
+## Autonomous RC Car
 **ATmega128A 3채널 초음파 자율주행**
 
 <!-- 주행 GIF를 assets/05/driving.gif 로 넣고 주석을 해제하세요
@@ -421,7 +421,7 @@ flowchart LR
 
 <a id="p06"></a>
 
-## 06. YOLO RPS Game
+## YOLO RPS Game
 **YOLO 가위바위보 2인 판정 게임**
 
 <!-- 실행 캡처를 assets/06/game.png 로 넣고 주석을 해제하세요
@@ -464,7 +464,7 @@ flowchart LR
 
 <a id="p07"></a>
 
-## 07. AgeApt
+## AgeApt
 **AI 연령 분석 맞춤형 영화관 키오스크 · 캡스톤디자인 경진대회 우수상**
 
 <p align="center">
